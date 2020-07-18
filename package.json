@@ -1,0 +1,28 @@
+{
+  "name": "nextjs-redux-emotion",
+  "version": "1.0.0",
+  "description": "a starter template for nextJS with Redux and EmotionJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Yuuki",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.4.4",
+    "next-redux-wrapper": "^6.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.23",
+    "@types/react": "^16.9.43",
+    "@types/react-redux": "^7.1.9",
+    "typescript": "^3.9.6"
+  }
+}

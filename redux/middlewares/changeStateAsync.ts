@@ -7,7 +7,7 @@ import {
 
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
-export default function* changeStateAsync() {
+export default function* changeStateAsync(): any {
   yield delay(1000);
   yield put<UserInterfaceAction>({
     type: UserInterfaceActionTypes.SET_CURRENT_STATE,

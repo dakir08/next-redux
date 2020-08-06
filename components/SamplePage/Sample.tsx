@@ -4,6 +4,24 @@ import { Store } from "../../redux/reducers/rootReducer";
 import { CurrentState } from "../../redux/reducers/userInterface";
 import { connect } from "react-redux";
 import setCurrentStateAsync from "../../redux/actionCreators/setCurrentStateAsync";
+import styled from "../styled/styled";
+
+const Redirect = styled.a`
+  color: ${({ theme }) => theme.colors.primary};
+  cursor: pointer;
+
+  :hover {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+  }
+`;
+
+interface HighLightProp {
+  color: string;
+}
+
+const HighLight = styled("span")<HighLightProp>`
+  color: ${(props) => props.color};
+`;
 
 export interface SampleProps {
   currentAppState: CurrentState;
@@ -20,12 +38,17 @@ const Sample: React.SFC<SampleProps> = ({
 
   return (
     <Fragment>
-      <h1>Sample Page</h1>
-      <p>Current State: {currentAppState}</p>
+      <h1>
+        Sample Page With <HighLight color="Red">Redux</HighLight> and{" "}
+        <HighLight color="orange">Emotion</HighLight>
+      </h1>
+      <p>
+        Current State: <HighLight color="blue">{currentAppState}</HighLight>
+      </p>
       <p>
         Return to{" "}
         <Link href="/">
-          <a>Home Page</a>
+          <Redirect>Home Page</Redirect>
         </Link>
       </p>
     </Fragment>

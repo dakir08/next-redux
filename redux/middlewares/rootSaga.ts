@@ -9,8 +9,6 @@ function* initalSaga() {
   );
 }
 
-function* mySaga() {}
-
-export default function* rootSaga() {
-  yield all([initalSaga(), mySaga()]);
+export default function* rootSaga(): any {
+  yield all([initalSaga()]);
 }

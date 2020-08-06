@@ -24,7 +24,7 @@ export interface UserInterfaceState {
 export default (
   state: UserInterfaceState = { currentState: CurrentState.INITIAL },
   action: UserInterfaceAction
-) => {
+): UserInterfaceState => {
   switch (action.type) {
     case UserInterfaceActionTypes.SET_CURRENT_STATE:
       return { ...state, currentState: action.payload };

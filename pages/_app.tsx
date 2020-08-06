@@ -4,6 +4,8 @@ import { END } from "redux-saga";
 import wrapper, { SagaStore } from "../redux/store";
 import Layout from "../components/Layout";
 import Head from "next/head";
+import { ThemeProvider } from "emotion-theming";
+import { theme } from "../components/styled/styled";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
@@ -11,9 +13,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>Welcome to NextJS With Redux</title>
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </Fragment>
   );
 };

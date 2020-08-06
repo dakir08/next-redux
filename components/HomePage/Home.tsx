@@ -1,9 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 
-export interface HomeProps {}
-
-const Home: React.SFC<HomeProps> = () => {
+const Home: React.FC = () => {
   return (
     <Fragment>
       <h1>Hello NextJS and Redux </h1>

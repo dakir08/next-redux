@@ -21,7 +21,7 @@
     "@typescript-eslint/parser": "^3.8.0",
     "emotion-theming": "^10.0.27",
     "eslint": "^7.6.0",
-    "next": "^9.4.4",
+    "next": "^11.1.3",
     "next-redux-wrapper": "^6.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
